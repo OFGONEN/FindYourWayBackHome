@@ -11,22 +11,25 @@ public class UIManager : MonoBehaviour
 
     public void OnActiveAbout()
     {
-        _about.active = true;
-        _main.active = false;
+        Debug.Log("OnActiveAbout");
+        _about.SetActive(true);
+        _main.SetActive(false);
     }
 
     public void OnActiveCredits()
     {
-        _credits.active = true;
-        _main.active = false;
+        Debug.Log("OnActiveCredits");
+        _credits.SetActive(true);
+        _main.SetActive(false);
     }
 
 
-    public void OnDisable()
+    public void OnBackMenu()
     {
-        _credits.active = false;
-        _about.active = false;
+        Debug.Log("OnDisable");
+        _credits.SetActive(false);
+        _about.SetActive(false);
 
-        _main.active = true;
+        _main.SetActive(true);
     }
 }
