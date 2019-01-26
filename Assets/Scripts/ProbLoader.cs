@@ -14,8 +14,6 @@ public class ProbLoader : MonoBehaviour
         _challenge2 = PlayerPrefs.GetInt("Challenge2");
     }
 
-
-
     void Start()
     {
         roomManager = GetComponent<RoomManager>();
@@ -42,8 +40,5 @@ public class ProbLoader : MonoBehaviour
             roomManager.AddRoom(2, "LoadedRoom2Normal");
         }
 
-        //Unlock the unlocable!
-        if (_challenge1 == 1 && _challenge2 == 1)
-            return;
     }
 }

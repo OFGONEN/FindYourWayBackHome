@@ -30,7 +30,7 @@ public class Loader : MonoBehaviour
     {
         // End Game Scene
         Debug.Log("Load End Game Scene");
-        _scene_to_load = 5;
+        _scene_to_load = 9;
         DissolveEffect.instance.FadeOut();
     }
 
