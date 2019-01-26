@@ -37,7 +37,8 @@ public class Portal : Interactable
             }
             else
             {
-                ActionOff();
+                ActionOn();
+                _can_Interact = false;
             }
         }
 

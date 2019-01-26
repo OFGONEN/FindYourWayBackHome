@@ -44,7 +44,8 @@ public class Door : Interactable
             }
             else
             {
-                ActionOff();
+                ActionOn();
+                _can_Interact = false;
             }
         }
     }
