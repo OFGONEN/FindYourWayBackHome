@@ -7,6 +7,8 @@ TagManager:
   - SceneManager
   - Fire
   - Room1Normal
+  - Interactable
+  - Door
   layers:
   - Default
   - TransparentFX

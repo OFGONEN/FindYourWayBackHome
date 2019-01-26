@@ -35,7 +35,7 @@ public class Door : Interactable
 
     public override void Interact()
     {
-        Debug.Log("Door Interact");
+        Debug.Log("Door Interact " + _can_Interact + " - " + _state);
         if (_can_Interact)
         {
             if (_state)
@@ -45,13 +45,23 @@ public class Door : Interactable
             else
             {
                 ActionOn();
-                _can_Interact = false;
             }
         }
     }
+
+	public void ChangeState(int state)
+	{
+		if( state == 1 )
+			_state = true;
+		else
+			_state = false;
+	}
+
     public void HideRooms()
     {
         Debug.Log("Door Closes Hide Every Other Room for Door: " + _number_of_door);
+		_anim.SetTrigger( "Close" );
+		_can_Interact = false;
         roomManager.HideRooms(_number_of_door);
     }
 
