@@ -9,6 +9,7 @@ TagManager:
   - Room1Normal
   - Interactable
   - Door
+  - Room2Normal
   layers:
   - Default
   - TransparentFX

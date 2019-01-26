@@ -11,4 +11,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/MainHall.unity
     guid: 66efa4836d081dd45a4d133f3befe6f9
+  - enabled: 1
+    path: Assets/_Scenes/Room1Portal.unity
+    guid: a846afc928cb4904b9e29e91d91b6c0b
+  - enabled: 1
+    path: Assets/_Scenes/Room1Normal.unity
+    guid: 819502b6bf89a684e9fc40bd2f00e7b7
+  - enabled: 1
+    path: Assets/_Scenes/Room2Portal.unity
+    guid: dde029f4bdede9b4a9fc989402e2c788
+  - enabled: 1
+    path: Assets/_Scenes/Room2Normal.unity
+    guid: ff4f082256db31a469ce6249607a7b36
+  - enabled: 1
+    path: Assets/_Scenes/Challange1.unity
+    guid: 2238927b941162940837731bff0e6c5e
+  - enabled: 1
+    path: Assets/_Scenes/Challange2.unity
+    guid: 8ffaaafeb0a6e84459cf5c26d1a1c7cf
+  - enabled: 1
+    path: Assets/_Scenes/Challange3.unity
+    guid: ff8e13cdc740ae7429ea05bcb90e9b9b
+  - enabled: 1
+    path: Assets/_Scenes/EndGame.unity
+    guid: 1338e5834fabfd849b4c40677b4cffd6
   m_configObjects: {}
