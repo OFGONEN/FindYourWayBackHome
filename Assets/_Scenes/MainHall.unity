@@ -265,6 +265,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1268981753}
   - component: {fileID: 1268981754}
+  - component: {fileID: 1268981755}
+  - component: {fileID: 1268981756}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -294,5 +296,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 804d0e804c5d47b4290107f56aa9a741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1268981755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268981752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f90062eca96d514387c764d20326f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rooms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &1268981756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268981752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98ee8d84cb023f4a856faea435a4bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
