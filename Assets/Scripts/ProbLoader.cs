@@ -21,23 +21,23 @@ public class ProbLoader : MonoBehaviour
         if (_challenge1 == 0)
         {
             SceneManager.LoadScene(2, LoadSceneMode.Additive);
-            roomManager.AddRoom(1, "LoadedRoom1Portal");
+            roomManager.AddRoom(1, "Room1Portal");
         }
         else
         {
             SceneManager.LoadScene(3, LoadSceneMode.Additive);
-            roomManager.AddRoom(1, "LoadedRoom1Normal");
+            roomManager.AddRoom(1, "Room1Normal");
         }
 
         if (_challenge2 == 0)
         {
             SceneManager.LoadScene(4, LoadSceneMode.Additive);
-            roomManager.AddRoom(2, "LoadedRoom2Portal");
+            roomManager.AddRoom(2, "Room2Portal");
         }
         else
         {
             SceneManager.LoadScene(5, LoadSceneMode.Additive);
-            roomManager.AddRoom(2, "LoadedRoom2Normal");
+            roomManager.AddRoom(2, "Room2Normal");
         }
 
     }

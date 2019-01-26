@@ -28,5 +28,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _NoiseFreq: 1
-    - _NoiseThreshold: 1
+    - _NoiseThreshold: 0
     m_Colors: []
