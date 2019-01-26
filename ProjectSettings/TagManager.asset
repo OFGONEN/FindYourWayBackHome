@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SceneManager
   - Fire
+  - Room1Normal
   layers:
   - Default
   - TransparentFX
