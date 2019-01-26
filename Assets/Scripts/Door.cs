@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class Door : Interactable
 {
-    Animator _anim;
+	public Shader _replacement;
+
+	Renderer[] _renderers;
+	Animator _anim;
     RoomManager roomManager;
     int _number_of_door;
     void Awake()
@@ -19,7 +22,8 @@ public class Door : Interactable
 
     void Start()
     {
-        roomManager = GameObject.FindWithTag("SceneManager").GetComponent<RoomManager>();
+		_renderers = transform.GetComponentsInChildren<Renderer>();
+		roomManager = GameObject.FindWithTag("SceneManager").GetComponent<RoomManager>();
     }
     public override void ActionOn()
     {
@@ -61,8 +65,25 @@ public class Door : Interactable
     {
         Debug.Log("Door Closes Hide Every Other Room for Door: " + _number_of_door);
 		_anim.SetTrigger( "Close" );
+		ChangeMaterialsInAllChildren();
 		_can_Interact = false;
         roomManager.HideRooms(_number_of_door);
     }
+
+	private void ChangeMaterialsInAllChildren()
+	{
+		foreach( Renderer r in _renderers )
+		{
+			List<Material> i = new List<Material>();
+			r.GetMaterials( i );
+
+			foreach( Material k in i )
+			{
+
+				k.shader = _replacement;
+			}
+
+		}
+	}
 
 }

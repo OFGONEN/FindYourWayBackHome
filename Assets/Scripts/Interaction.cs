@@ -27,7 +27,7 @@ public class Interaction : MonoBehaviour
         Debug.DrawRay(transform.position, transform.forward * 3, Color.black, 0.1f);
         if (_can_interact)
         {
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, 256))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 6f, 256))
             {
                 if (_cash_object == null)
                 {
