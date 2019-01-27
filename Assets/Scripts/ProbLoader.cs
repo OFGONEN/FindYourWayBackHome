@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +7,8 @@ public class ProbLoader : MonoBehaviour
 {
     RoomManager roomManager;
     int _challenge1, _challenge2;
+
+    WallControl _wallControl;
 
     void Awake()
     {
@@ -17,6 +19,8 @@ public class ProbLoader : MonoBehaviour
     void Start()
     {
         roomManager = GetComponent<RoomManager>();
+
+        _wallControl = GetComponent<WallControl>();
 
         if (_challenge1 == 0)
         {
@@ -40,5 +44,30 @@ public class ProbLoader : MonoBehaviour
             roomManager.AddRoom(2, "Room2Normal");
         }
 
+        if (_challenge1 == 1 && _challenge2 == 1)
+            _wallControl.ChangeVertexPower(0.5f);
+        else if (_challenge1 == 1 || _challenge2 == 1)
+            _wallControl.ChangeVertexPower(0.8f);
     }
+
+	public void AddRooms()
+	{
+		if( _challenge1 == 0 )
+		{
+			roomManager.AddRoom( 1, "Room1Portal" );
+		}
+		else
+		{
+			roomManager.AddRoom( 1, "Room1Normal" );
+		}
+
+		if( _challenge2 == 0 )
+		{
+			roomManager.AddRoom( 2, "Room2Portal" );
+		}
+		else
+		{
+			roomManager.AddRoom( 2, "Room2Normal" );
+		}
+	}
 }

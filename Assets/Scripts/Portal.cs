@@ -10,7 +10,7 @@ public class Portal : Interactable
     {
         _can_Interact = true;
         _state = false;
-        _number_of_portal = Convert.ToInt32(gameObject.name[6]);
+        _number_of_portal = Convert.ToInt32(gameObject.name[6]) - 48;
         Debug.Log("This Portal's Number is: " + _number_of_portal);
 
     }
@@ -18,12 +18,14 @@ public class Portal : Interactable
     public override void ActionOn()
     {
         Debug.Log("Portal ActionOn");
+		_state = true;
         Loader.instance.LoadSideScene(_number_of_portal + 5);
     }
 
     public override void ActionOff()
     {
         Debug.Log("Portal ActionOff");
+		_state = false;
     }
 
     public override void Interact()
@@ -38,7 +40,6 @@ public class Portal : Interactable
             else
             {
                 ActionOn();
-                _can_Interact = false;
             }
         }
 

@@ -15,6 +15,7 @@ public class Trophy : Interactable
     public override void ActionOn()
     {
         Debug.Log("Trophy ActiveON ");
+		_state = true;
         PlayerPrefs.SetInt("Challenge" + _number, 1);
         Loader.instance.LoadMainHall();
     }
@@ -22,6 +23,7 @@ public class Trophy : Interactable
     public override void ActionOff()
     {
         Debug.Log("Trophy ActiveOff");
+		_state = false;
     }
 
     public override void Interact()
@@ -36,7 +38,6 @@ public class Trophy : Interactable
             else
             {
                 ActionOn();
-                _can_Interact = false;
             }
         }
     }
