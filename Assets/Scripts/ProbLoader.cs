@@ -10,15 +10,17 @@ public class ProbLoader : MonoBehaviour
 
     WallControl _wallControl;
 
-    void Awake()
-    {
-        _challenge1 = PlayerPrefs.GetInt("Challenge1");
-        _challenge2 = PlayerPrefs.GetInt("Challenge2");
-    }
+    
 
     void Start()
     {
-        roomManager = GetComponent<RoomManager>();
+
+	_challenge1 = PlayerPrefs.GetInt( "Challenge1" );
+	_challenge2 = PlayerPrefs.GetInt( "Challenge2" );
+
+	Debug.Log( "Challenge " + _challenge1 + " - " + _challenge2 );
+
+	roomManager = GetComponent<RoomManager>();
 
         _wallControl = GetComponent<WallControl>();
 

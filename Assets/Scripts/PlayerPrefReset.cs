@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerPrefReset : MonoBehaviour
 {
+	public int number;
 
     void Start()
     {
-        PlayerPrefs.SetInt("Challenge1", 0);
-        PlayerPrefs.SetInt("Challenge2", 0);
+        PlayerPrefs.SetInt("Challenge1", number);
+        PlayerPrefs.SetInt("Challenge2", number);
     }
 }

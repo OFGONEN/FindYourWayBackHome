@@ -16,7 +16,7 @@ public class Trophy : Interactable
     {
         Debug.Log("Trophy ActiveON ");
 		_state = true;
-        PlayerPrefs.SetInt("Challenge" + _number, 1);
+        PlayerPrefs.SetInt( "Challenge" + _number, 1);
         Loader.instance.LoadMainHall();
     }
 

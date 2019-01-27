@@ -76,17 +76,23 @@ public class Interaction : MonoBehaviour
         {
             _cash_object.GetComponent<Trophy>().Interact();
         }
+		else if(_cash_type == 3 )
+		{
+
+		}
     }
     void DecideType(string tag)
     {
         Debug.Log("DecideType: " + tag);
 
-        if (tag == "Door")
-            _cash_type = 0;
-        else if (tag == "Portal")
-            _cash_type = 1;
-        else if (tag == "Trophy")
-            _cash_type = 2;
+		if( tag == "Door" )
+			_cash_type = 0;
+		else if( tag == "Portal" )
+			_cash_type = 1;
+		else if( tag == "Trophy" )
+			_cash_type = 2;
+		else if( tag == "EndGame" )
+			_cash_type = 3;
     }
 
     public void EnableInteract()
