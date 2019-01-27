@@ -47,9 +47,9 @@ public class ProbLoader : MonoBehaviour
         }
 
         if (_challenge1 == 1 && _challenge2 == 1)
-            _wallControl.ChangeVertexPower(0.5f);
+            _wallControl.ChangeVertexPower(0f);
         else if (_challenge1 == 1 || _challenge2 == 1)
-            _wallControl.ChangeVertexPower(0.8f);
+            _wallControl.ChangeVertexPower(0.5f);
     }
 
 	public void AddRooms()
