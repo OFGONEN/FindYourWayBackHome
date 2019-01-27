@@ -10,6 +10,7 @@ TagManager:
   - Interactable
   - Door
   - Room2Normal
+  - Trap
   layers:
   - Default
   - TransparentFX
