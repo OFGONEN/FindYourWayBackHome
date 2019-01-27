@@ -19,7 +19,7 @@
 
 		Colormask 0
 		ZWrite off
-
+		Cull off
 			Stencil
 		{
 		 Ref 1
@@ -64,8 +64,8 @@
 			float i = dot(IN.viewDir, IN.worldNormal);
 			float noiseVal = tex2D(_NoiseTex, float2(IN.uv_NoiseTex.x + _Time.x * _NoiseTime, IN.uv_NoiseTex.y + _Time.x * _NoiseTime) * _NoiseFreq).r * _NoiseMult;
 
-			if (i + noiseVal < _NoiseSlider)
-				discard;
+			if (i + noiseVal < _NoiseSlider && i + noiseVal > 0)
+			 discard;
 
 
 			// Metallic and smoothness come from slider variables
