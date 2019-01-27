@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Door : Interactable
 {
-	public Shader _replacement;
+    public Shader _replacement;
 
-	Renderer[] _renderers;
-	Animator _anim;
+    Renderer[] _renderers;
+    Animator _anim;
     RoomManager roomManager;
     int _number_of_door;
     void Awake()
@@ -16,14 +16,14 @@ public class Door : Interactable
         _can_Interact = true;
         _state = false;
         _anim = GetComponent<Animator>();
-        _number_of_door = Convert.ToInt32(gameObject.name[4]);
+        _number_of_door = Convert.ToInt32(gameObject.name[4]) - 48;
         Debug.Log("This Door's Number is: " + _number_of_door);
     }
 
     void Start()
     {
-		_renderers = transform.GetComponentsInChildren<Renderer>();
-		roomManager = GameObject.FindWithTag("SceneManager").GetComponent<RoomManager>();
+        _renderers = transform.GetComponentsInChildren<Renderer>();
+        roomManager = GameObject.FindWithTag("SceneManager").GetComponent<RoomManager>();
     }
     public override void ActionOn()
     {
@@ -53,37 +53,37 @@ public class Door : Interactable
         }
     }
 
-	public void ChangeState(int state)
-	{
-		if( state == 1 )
-			_state = true;
-		else
-			_state = false;
-	}
+    public void ChangeState(int state)
+    {
+        if (state == 1)
+            _state = true;
+        else
+            _state = false;
+    }
 
     public void HideRooms()
     {
         Debug.Log("Door Closes Hide Every Other Room for Door: " + _number_of_door);
-		_anim.SetTrigger( "Close" );
-		ChangeMaterialsInAllChildren();
-		_can_Interact = false;
+        _anim.SetTrigger("Close");
+        ChangeMaterialsInAllChildren();
+        _can_Interact = false;
         roomManager.HideRooms(_number_of_door);
     }
 
-	private void ChangeMaterialsInAllChildren()
-	{
-		foreach( Renderer r in _renderers )
-		{
-			List<Material> i = new List<Material>();
-			r.GetMaterials( i );
+    private void ChangeMaterialsInAllChildren()
+    {
+        foreach (Renderer r in _renderers)
+        {
+            List<Material> i = new List<Material>();
+            r.GetMaterials(i);
 
-			foreach( Material k in i )
-			{
+            foreach (Material k in i)
+            {
 
-				k.shader = _replacement;
-			}
+                k.shader = _replacement;
+            }
 
-		}
-	}
+        }
+    }
 
 }

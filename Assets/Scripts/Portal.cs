@@ -10,7 +10,7 @@ public class Portal : Interactable
     {
         _can_Interact = true;
         _state = false;
-        _number_of_portal = Convert.ToInt32(gameObject.name[6]);
+        _number_of_portal = Convert.ToInt32(gameObject.name[6]) - 48;
         Debug.Log("This Portal's Number is: " + _number_of_portal);
 
     }
