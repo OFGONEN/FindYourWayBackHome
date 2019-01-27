@@ -9,6 +9,7 @@ public class Interaction : MonoBehaviour
     public bool _can_interact;
 
     GameObject _cash_object;
+    Rigidbody rb;
     int _cash_type;
     RaycastHit hit;
     void Awake()
@@ -21,6 +22,8 @@ public class Interaction : MonoBehaviour
         _can_interact = false;
         _cash_object = null;
         _cash_type = -1;
+
+        rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
@@ -31,7 +34,7 @@ public class Interaction : MonoBehaviour
             {
                 if (_cash_object == null)
                 {
-					Debug.Log( "Cashed the object: " + hit.collider.name );
+                    Debug.Log("Cashed the object: " + hit.collider.name);
                     _cash_object = hit.collider.gameObject;
                     DecideType(_cash_object.tag);
                 }
@@ -57,7 +60,7 @@ public class Interaction : MonoBehaviour
 
     void Interact()
     {
-		Debug.Log( "Interact By Player" );
+        Debug.Log("Interact By Player");
 
         if (_cash_type == 0)
         {
@@ -86,7 +89,7 @@ public class Interaction : MonoBehaviour
 
     public void EnableInteract()
     {
-		Debug.Log( "EnableInteract" );
+        Debug.Log("EnableInteract");
         _can_interact = true;
         _cash_object = null;
         _cash_type = -1;
@@ -94,9 +97,15 @@ public class Interaction : MonoBehaviour
 
     public void DisableInteract()
     {
-		Debug.Log( "DisableInteract" );
-		_can_interact = false;
+        Debug.Log("DisableInteract");
+        _can_interact = false;
         _cash_object = null;
         _cash_type = -1;
+    }
+
+    public void Frezee()
+    {
+        rb.useGravity = false;
+        rb.velocity = Vector3.zero;
     }
 }
