@@ -42,6 +42,7 @@ public class Loader : MonoBehaviour
     }
     public void LoadScene()
     {
+		Debug.Log( "Load Scene" + _scene_to_load );
         SceneManager.LoadScene(_scene_to_load);
     }
 

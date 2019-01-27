@@ -18,12 +18,14 @@ public class Portal : Interactable
     public override void ActionOn()
     {
         Debug.Log("Portal ActionOn");
+		_state = true;
         Loader.instance.LoadSideScene(_number_of_portal + 5);
     }
 
     public override void ActionOff()
     {
         Debug.Log("Portal ActionOff");
+		_state = false;
     }
 
     public override void Interact()
@@ -38,7 +40,6 @@ public class Portal : Interactable
             else
             {
                 ActionOn();
-                _can_Interact = false;
             }
         }
 

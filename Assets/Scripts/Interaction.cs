@@ -27,10 +27,10 @@ public class Interaction : MonoBehaviour
     }
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.forward * 3, Color.black, 0.1f);
+        Debug.DrawRay(transform.position, transform.forward * 3, Color.red, 0.1f);
         if (_can_interact)
         {
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 6f, 256))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 3f, 256))
             {
                 if (_cash_object == null)
                 {
@@ -41,6 +41,8 @@ public class Interaction : MonoBehaviour
             }
             else
             {
+				if( _cash_object != null )
+					Debug.Log( "Decashed the object: " + _cash_object.name );
                 _cash_object = null;
                 _cash_type = -1;
             }
