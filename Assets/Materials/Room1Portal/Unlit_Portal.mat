@@ -31,7 +31,7 @@ Material:
     - _Metallic: 0
     - _NoiseFreq: 3.2
     - _NoiseMult: 0.877
-    - _NoiseSlider: 0.714
+    - _NoiseSlider: 1
     - _NoiseTime: 1.3
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

@@ -31,15 +31,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _NoiseFreq: 0.713
+    - _NoiseFreq: 0.363
     - _NoiseFreq1: 0.02
-    - _NoiseMult: 0.33
+    - _NoiseMult: 2.81
     - _NoiseMult1: 1.1
     - _RimMult: 0.52
-    - _Speed: 2.5
+    - _Speed: 0.53
     - _Speed1: 0.3
     m_Colors:
-    - _Color: {r: 0.066037714, g: 0.02115913, b: 0, a: 1}
-    - _NoiseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _NoiseColor1: {r: 0.076495215, g: 0.084905684, b: 0.07838757, a: 1}
-    - _RimColor: {r: 0.13301659, g: 0, b: 1, a: 1}
+    - _Color: {r: 0.103773594, g: 0, b: 0, a: 1}
+    - _NoiseColor: {r: 0.1509434, g: 0.13281202, b: 0.00071199884, a: 1}
+    - _NoiseColor1: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+    - _RimColor: {r: 0, g: 0, b: 0, a: 1}
