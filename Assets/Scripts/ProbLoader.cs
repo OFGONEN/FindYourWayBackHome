@@ -8,6 +8,8 @@ public class ProbLoader : MonoBehaviour
     RoomManager roomManager;
     int _challenge1, _challenge2;
 
+    WallControl _wallControl;
+
     void Awake()
     {
         _challenge1 = PlayerPrefs.GetInt("Challenge1");
@@ -17,6 +19,8 @@ public class ProbLoader : MonoBehaviour
     void Start()
     {
         roomManager = GetComponent<RoomManager>();
+
+        _wallControl = GetComponent<WallControl>();
 
         if (_challenge1 == 0)
         {
@@ -40,5 +44,9 @@ public class ProbLoader : MonoBehaviour
             roomManager.AddRoom(2, "Room2Normal");
         }
 
+        if (_challenge1 == 1 && _challenge2 == 1)
+            _wallControl.ChangeVertexPower(0.5f);
+        else if (_challenge1 == 1 || _challenge2 == 1)
+            _wallControl.ChangeVertexPower(0.8f);
     }
 }
