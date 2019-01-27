@@ -19,7 +19,7 @@ public class Interaction : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
 
-        _can_interact = false;
+        //_can_interact = false;
         _cash_object = null;
         _cash_type = -1;
 

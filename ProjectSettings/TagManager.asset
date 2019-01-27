@@ -11,6 +11,9 @@ TagManager:
   - Door
   - Room2Normal
   - Trap
+  - Portal
+  - Room1Portal
+  - Room2Portal
   layers:
   - Default
   - TransparentFX

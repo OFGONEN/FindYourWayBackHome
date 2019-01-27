@@ -10,7 +10,7 @@ public class RoomTrap : MonoBehaviour {
 	{
 		if(other.tag == "Player" )
 		{
-			door.HideRooms();
+			door.ActionOff();
 		}
 	}
 }

@@ -30,7 +30,7 @@ public class RoomManager : MonoBehaviour
 
     public void AddRoom(int number, string roomTag)
     {
-        rooms[number] = null;
+        
         rooms[number] = GameObject.FindWithTag(roomTag);
     }
 }

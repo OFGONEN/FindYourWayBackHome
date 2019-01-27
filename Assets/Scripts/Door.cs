@@ -7,6 +7,8 @@ public class Door : Interactable
 {
     public Shader _replacement;
 
+	public bool _portal_door;
+
     Renderer[] _renderers;
     Animator _anim;
     RoomManager roomManager;
@@ -63,11 +65,13 @@ public class Door : Interactable
 
     public void HideRooms()
     {
-        Debug.Log("Door Closes Hide Every Other Room for Door: " + _number_of_door);
-        _anim.SetTrigger("Close");
-        ChangeMaterialsInAllChildren();
-        _can_Interact = false;
-        roomManager.HideRooms(_number_of_door);
+		if( _portal_door )
+		{
+			Debug.Log( "Door Closes Hide Every Other Room for Door: " + _number_of_door );
+			ChangeMaterialsInAllChildren();
+			_can_Interact = false;
+			roomManager.HideRooms( _number_of_door );
+		}
     }
 
     private void ChangeMaterialsInAllChildren()
