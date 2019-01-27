@@ -14,6 +14,8 @@ TagManager:
   - Portal
   - Room1Portal
   - Room2Portal
+  - Trophy
+  - EndGame
   layers:
   - Default
   - TransparentFX
